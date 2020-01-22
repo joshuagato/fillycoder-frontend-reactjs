@@ -1,0 +1,72 @@
+.posts {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    
+    form {
+        display: block;
+        margin: auto;
+
+        textarea {
+            width: 20rem;
+            height: 5rem;
+        }
+        button {
+            margin-top: 0;
+            padding-top: 0;
+            display: block;
+            cursor: pointer;
+            background-color: lightblue;
+            padding: 0.5rem;
+            width: 10rem;
+            border-radius: 10rem;
+            border: none;
+            transition: all 0.9s;
+            outline: none;
+
+            &:hover {
+                background-color: #89aebb;
+            }
+        }
+    }
+    section.loaded-posts {
+        div {
+            margin-top: 1rem;
+
+            article {
+                border: none;
+                border-top: 1px solid #8b9281;
+                border-bottom: 1px solid #8b9281;
+                padding: 0.2rem 2rem;
+                margin: 0.5rem 0;
+
+                span {
+                    color: #999c94;
+                    margin: 0 0.5rem;
+                }
+
+                section {
+                    display: block;
+    
+                    button {
+                        display: inline-block;
+                        margin: 0.5rem 0.5rem;
+                        cursor: pointer;
+                        color: #89aebb;
+                        background: none;
+                        border: none;
+                        padding: 0;
+                        transition: all 0.9s;
+                        outline: none;
+
+                        &:hover {
+                            color: #033446;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
