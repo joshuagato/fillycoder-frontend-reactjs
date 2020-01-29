@@ -136,10 +136,11 @@ class Posts extends Component {
     }
 
     render() {
+        console.log(this.state.posts);
         return (
             <div className="posts">
                 <form className="posts-form" onSubmit={this.createPost}>
-                    <textarea onChange={this.postInputHandler} value={this.state.message}></textarea>
+                    <textarea onChange={this.postInputHandler} value={this.state.message} required></textarea>
                     <button type="submit">CREATE POST</button>
                 </form>
                 <section className="loaded-posts">
@@ -147,7 +148,11 @@ class Posts extends Component {
                         {
                             this.state.posts.map(post => (
                                 <article key={post.id}>
-                                    <p><span>By {post.username}</span> <span>At {post.createdAt}</span></p>
+                                    <p>
+                                        <span>By {post.username}</span>
+                                        <span>On {new Date(post.createdAt).toLocaleDateString('en-US')}</span>
+                                        <span>Updated On {new Date(post.updatedAt).toLocaleDateString('en-US')}</span>
+                                    </p>
                                     <p>{post.message}</p>
                                     <section>
                                         <button onClick={(id) => this.editPost(post.id)}>Edit</button>
